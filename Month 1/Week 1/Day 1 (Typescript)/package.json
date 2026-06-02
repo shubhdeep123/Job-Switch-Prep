@@ -1,0 +1,21 @@
+{
+  "name": "day-1-(typescript)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "npx tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "axios": "^1.16.1"
+  }
+}

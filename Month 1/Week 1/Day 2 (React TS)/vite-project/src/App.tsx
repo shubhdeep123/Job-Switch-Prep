@@ -1,12 +1,12 @@
 import './App.css'
-import { BioInput } from './components/BioInput'
+import { AutoIncCounter } from './components/AutoIncCounter'
 
 
 function App() {
 
   return (
     <div>
-      <BioInput />
+      <AutoIncCounter />
     </div>
   )
 }

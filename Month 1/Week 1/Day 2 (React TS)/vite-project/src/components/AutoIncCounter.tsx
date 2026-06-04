@@ -11,6 +11,10 @@ export function AutoIncCounter(): JSX.Element {
             }, 1000);
             return () => {clearInterval(interval)};
         }
+        const resetInterval = setInterval(() => {
+            setCount(0);
+        },3000)
+        return () => {clearInterval(resetInterval)};
     }, [isPaused]);
 
     return (

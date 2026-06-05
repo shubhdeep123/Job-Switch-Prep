@@ -1,12 +1,11 @@
 import './App.css'
-import { AutoIncCounter } from './components/AutoIncCounter'
-
+import {DebounceSearch} from './components/DebounceSearch.tsx';
 
 function App() {
 
   return (
     <div>
-      <AutoIncCounter />
+      <DebounceSearch />
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import './App.css'
-import { MemoComponent } from './components/MemoComponent.tsx';
-
+import { PerformanceSearch } from './components/PerformanceSearch'
 
 let userListDefault : { id: number; name: string; email: string }[] = Array.from({ length: 1000 }).map((_, index) => ({
   id: index + 1,
@@ -13,7 +12,11 @@ function App() {
 
   return (
     <div>
-      <MemoComponent userList={userListDefault} />
+      {/* <MemoComponent userList={userListDefault} /> */}
+      {/* <IncDecCounter /> */}
+      {/* <ValueTracker /> */}
+      {/* <PrimeNumberFinder/> */}
+      <PerformanceSearch userList={userListDefault}/>
     </div>
   )
 }

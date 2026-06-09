@@ -10,7 +10,7 @@ export function UserSearch() {
     ? `https://jsonplaceholder.typicode.com/users/${debouncedValue}`
     : null;
 
-  const { data, error, isLoading } = useFetch<User>(url);
+  const { data, error, isLoading } = useFetch<User[]>(url);
 
   return (
     <div>
@@ -24,9 +24,9 @@ export function UserSearch() {
       {error && <p style={{ color: "red" }}>{error}</p>}
       {data && !isLoading && (
         <div>
-          <h2>{data.name}</h2>
-          <p>{data.email}</p>
-          <p>{data?.address?.city}</p>
+          <h2>{data[0].name}</h2>
+          <p>{data[0].email}</p>
+          <p>{data[0]?.address?.city}</p>
         </div>
       )}
     </div>

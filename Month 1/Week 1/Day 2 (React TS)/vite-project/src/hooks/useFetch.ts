@@ -14,7 +14,7 @@ export function useFetch<T>(url: string | null): {
 
     const controller = new AbortController();
 
-    async function fetchUser() {
+    async function fetchData() {
       setIsLoading(true);
       setError("");
       try {
@@ -25,9 +25,13 @@ export function useFetch<T>(url: string | null): {
           setData(null);
           throw new Error("User not found");
         }
-        const data = await response.json();
+        const data:T = await response.json();
         setData(data);
       } catch (error) {
+        if (error instanceof DOMException && error.name === "AbortError") {
+          return;
+        }
+
         if (error instanceof Error) {
           setError(error.message);
         } else {
@@ -39,7 +43,7 @@ export function useFetch<T>(url: string | null): {
       }
     }
 
-    fetchUser();
+    fetchData();
 
     return () => {
       controller.abort();

@@ -1,5 +1,6 @@
 import './App.css'
-import { SubmitForm } from './components/SubmitForm'
+// import { SubmitForm } from './components/SubmitForm'
+import { UserDirectory } from './components/UserDirectory'
 
 // let userListDefault : { id: number; name: string; email: string }[] = Array.from({ length: 1000 }).map((_, index) => ({
 //   id: index + 1,
@@ -12,7 +13,8 @@ function App() {
 
   return (
     <div>
-      <SubmitForm/>
+      <UserDirectory/>
+      {/* <SubmitForm/> */}
       {/* <Dropdown/> */}
       {/* <WindowSize/> */}
       {/* <Password/> */}

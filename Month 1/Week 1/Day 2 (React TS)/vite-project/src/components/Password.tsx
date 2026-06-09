@@ -1,7 +1,7 @@
 import { useToggle } from "../hooks/useToggle";
 
 export function Password() {
-  const [isVisible, toggle, setTrue, setFalse] = useToggle(false);
+  const [isVisible, toggle, , ] = useToggle(false);
 
   return (
     <div>

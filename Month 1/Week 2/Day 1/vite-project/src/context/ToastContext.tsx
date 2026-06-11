@@ -21,15 +21,19 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([]);
 
   function addToast(message: string, type: "success" | "error" | "info") {
+    const id = Date.now();
     setToasts((prev) => [
       ...prev,
       {
         message: message,
         type: type,
-        id: Date.now(),
+        id: id,
       },
     ]);
-    console.log(toasts);
+    
+    setTimeout(() => {
+      removeToast(id);
+    }, 3000);
   }
 
   function removeToast(id: number) {

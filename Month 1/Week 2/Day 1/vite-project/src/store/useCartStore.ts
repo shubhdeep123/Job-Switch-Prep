@@ -11,7 +11,7 @@ interface CartItem {
 interface CartStore {
   items: CartItem[];
 
-  addItems: (item: CartItem) => void;
+  addItem: (item: CartItem) => void;
   removeItem: (id: number) => void;
   clearCart: () => void;
 }
@@ -20,7 +20,7 @@ export const useCartStore = create<CartStore>((set, get) => ({
   // state
   items: [],
   // actions — use set() to update state
-  addItems: (item: CartItem) =>
+  addItem: (item: CartItem) =>
     set((state) => {
       const existing = state.items.find((i) => i.id === item.id);
       if (existing) {
@@ -47,5 +47,5 @@ export const useCartStore = create<CartStore>((set, get) => ({
       };
     }),
   clearCart: () => set({ items: [] }),
-  
+
 }));

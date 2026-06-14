@@ -1,6 +1,9 @@
 import "./App.css";
+import { CartSideBar } from "./component/CartSideBar";
 import { InputForm } from "./component/InputForm";
 import { NavBar } from "./component/NavBar";
+import { ProductList } from "./component/ProductList";
+// import { Counter } from "./component/Counter";
 import { Toast } from "./component/Toast";
 import { AuthProvider } from "./context/AuthContext";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -11,9 +14,14 @@ function App() {
     <AuthProvider>
       <ToastProvider>
         <ThemeProvider>
-          <Toast/>
+          <Toast />
           <NavBar />
           <InputForm />
+          <div style={{ display: "flex", gap: "20px" }}>
+            <ProductList />
+            <CartSideBar />
+          </div>
+          {/* <Counter /> */}
         </ThemeProvider>
       </ToastProvider>
     </AuthProvider>

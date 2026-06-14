@@ -1,11 +1,13 @@
 import React, { createContext, useContext, useState } from "react";
 
 // define shape of object that context will provide to component
-interface CartItem {
+export interface CartItem {
   id: number;
   name: string;
   price: number;
   rating: number;
+  quantity: number;
+  image: string;
 }
 
 interface CartContextType {
@@ -37,6 +39,8 @@ export function CartContextProvider({
         name: item.name,
         price: item.price,
         rating: item.rating,
+        quantity:item.quantity,
+        image:item.image
       },
     ]);
   }

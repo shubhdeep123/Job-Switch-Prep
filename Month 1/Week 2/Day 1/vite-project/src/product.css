@@ -1,0 +1,178 @@
+/* Page */
+
+.product-page {
+  min-height: 100vh;
+  padding: 24px;
+  background: #f3f4f6;
+  transition: all 0.3s ease;
+}
+
+.product-page h1 {
+  margin-bottom: 24px;
+  color: #1f2937;
+}
+
+/* Toolbar */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.toolbar input,
+.toolbar select {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+  min-width: 180px;
+}
+
+.toolbar input:focus,
+.toolbar select:focus {
+  border-color: #185fa5;
+}
+
+/* Buttons */
+
+.toolbar button,
+.add-cart-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background: #185fa5;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.toolbar button:hover,
+.add-cart-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Product Grid */
+
+.product-grid {
+  margin-top: 24px;
+
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 24px;
+}
+
+/* Product Card */
+
+.product-card {
+  background: white;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Image */
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Content */
+
+.product-name {
+  padding: 16px 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.product-price {
+  padding: 0 16px;
+  margin-top: 8px;
+
+  color: #185fa5;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.product-rating {
+  padding: 0 16px;
+  color: #f59e0b;
+  font-size: 16px;
+}
+
+/* Cart Button */
+
+.add-cart-btn {
+  margin: 16px;
+  margin-top: auto;
+}
+
+/* Dark Theme */
+
+.product-page.dark {
+  background: #111827;
+}
+
+.product-page.dark h1 {
+  color: white;
+}
+
+.product-page.dark .toolbar input,
+.product-page.dark .toolbar select {
+  background: #1f2937;
+  color: white;
+  border-color: #374151;
+}
+
+.product-page.dark .product-card {
+  background: #1f2937;
+}
+
+.product-page.dark .product-name {
+  color: white;
+}
+
+.product-page.dark .product-price {
+  color: #60a5fa;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .toolbar input,
+  .toolbar select,
+  .toolbar button {
+    width: 100%;
+  }
+}

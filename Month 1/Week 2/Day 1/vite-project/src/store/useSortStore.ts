@@ -10,7 +10,7 @@ interface SortStore {
   resetFilters: () => void;
 }
 
-export const useSortStore = create<SortStore>((set, get) => ({
+export const useSortStore = create<SortStore>((set) => ({
   searchTerm: "",
   sortBy: "price",
   sortOrder: "asc",

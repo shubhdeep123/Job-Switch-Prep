@@ -1,13 +1,16 @@
 import type React from "react";
-import ".././product.css"
+import ".././product.css";
 import { useAuth } from "../context/AuthContext";
 import { PRODUCTS } from "../data/JSONData";
-import { useCartStore } from "../store/useCartStore";
+// import { useCartStore } from "../store/useCartStore";
 import { useSortStore } from "../store/useSortStore";
 import { useUserPref } from "../store/useUserPref";
+import { useDispatch } from "react-redux";
+import { addItem } from "../slices/cartSlice";
 
 export function ProductList() {
-  const { addItem } = useCartStore();
+  // const { addItem } = useCartStore();
+  const dispatch = useDispatch();
   const { user } = useAuth();
 
   const {
@@ -86,10 +89,7 @@ export function ProductList() {
           <option value="hi">Hindi</option>
         </select>
 
-        <button
-          className="action-btn"
-          onClick={resetPreferences}
-        >
+        <button className="action-btn" onClick={resetPreferences}>
           Reset Pref
         </button>
       </div>
@@ -130,10 +130,7 @@ export function ProductList() {
           <option value="desc">DESC</option>
         </select>
 
-        <button
-          className="action-btn"
-          onClick={resetFilters}
-        >
+        <button className="action-btn" onClick={resetFilters}>
           Reset Filters
         </button>
       </div>
@@ -141,13 +138,8 @@ export function ProductList() {
       {user && (
         <div className="product-grid">
           {filteredProducts.map((product) => (
-            <div
-              key={product.id}
-              className="product-card"
-            >
-              <p className="product-name">
-                {product.name}
-              </p>
+            <div key={product.id} className="product-card">
+              <p className="product-name">{product.name}</p>
 
               <img
                 className="product-image"
@@ -155,17 +147,13 @@ export function ProductList() {
                 alt={product.name}
               />
 
-              <p className="product-price">
-                ₹{product.price}
-              </p>
+              <p className="product-price">₹{product.price}</p>
 
-              <p className="product-rating">
-                ⭐ {product.rating}
-              </p>
+              <p className="product-rating">⭐ {product.rating}</p>
 
               <button
                 className="add-cart-btn"
-                onClick={() => addItem(product)}
+                onClick={() => dispatch(addItem(product))}
               >
                 Add To Cart
               </button>

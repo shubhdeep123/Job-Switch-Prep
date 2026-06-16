@@ -35,9 +35,7 @@ export function TodoList() {
   return (
     <div className="min-h-screen bg-slate-100 flex justify-center items-start p-8">
       <div className="w-full max-w-2xl bg-white rounded-2xl shadow-lg p-6">
-        <h1 className="text-3xl font-bold text-center mb-6">
-          📝 Todo App
-        </h1>
+        <h1 className="text-3xl font-bold text-center mb-6">📝 Todo App</h1>
 
         <div className="flex flex-col md:flex-row gap-3 mb-6">
           <input
@@ -64,12 +62,7 @@ export function TodoList() {
             value={filter}
             onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
               dispatch(
-                setFilter(
-                  e.target.value as
-                    | "all"
-                    | "active"
-                    | "completed",
-                ),
+                setFilter(e.target.value as "all" | "active" | "completed"),
               )
             }
             className="px-4 py-3 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-500"

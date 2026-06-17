@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { User } from "../types/UserType";
+import { type Comment, type Post } from "../types/PostType";
 
 export const userApi = createApi({
   reducerPath: "api",
@@ -20,11 +21,14 @@ export const userApi = createApi({
         body,
       }),
     }),
+    getPosts: builder.query<Post[], void>({
+      query: () => "/posts",
+    }),
+    getComments:builder.query<Comment[],number>({
+        query:(postId)=>`/posts/${postId}/comments`
+    })
   }),
 });
 
-export const {
-  useGetUsersQuery,
-  useGetUserByIdQuery,
-  useCreateUserMutation,
-} = userApi;
+export const { useGetUsersQuery, useGetUserByIdQuery, useCreateUserMutation, useGetPostsQuery, useGetCommentsQuery } =
+  userApi;

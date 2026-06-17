@@ -1,6 +1,7 @@
 import './App.css'
 // import { SubmitForm } from './components/SubmitForm'
-import { UserDirectory } from './components/UserDirectory'
+// import { UserDirectory } from './components/UserDirectory'
+import { PostList } from './components/PostList'
 
 // let userListDefault : { id: number; name: string; email: string }[] = Array.from({ length: 1000 }).map((_, index) => ({
 //   id: index + 1,
@@ -13,7 +14,8 @@ function App() {
 
   return (
     <div>
-      <UserDirectory/>
+      <PostList/>
+      {/* <UserDirectory/> */}
       {/* <SubmitForm/> */}
       {/* <Dropdown/> */}
       {/* <WindowSize/> */}

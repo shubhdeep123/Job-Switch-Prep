@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useFetch } from "../hooks/useFetch";
 import type { User } from "../types/UserType";
 import { SearchBar } from "./SearchBar";
 import { UserGrid } from "./UserGrid";

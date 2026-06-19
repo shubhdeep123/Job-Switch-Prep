@@ -13,6 +13,7 @@ export function useBioForm() {
 
   function handleReset(): void {
     setBio("");
+    setName("");
     textAreaElement.current?.focus();
   }
   return {

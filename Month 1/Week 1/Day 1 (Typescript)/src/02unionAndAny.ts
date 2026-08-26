@@ -1,4 +1,4 @@
-// UNION TYPES AND LITERAL TYPES
+// UNION TYPES AND LITERAL TYPE
 let subs: string | number = "1M"; // 'subs' can be either a string or a number
 subs = 123; // valid assignment
 

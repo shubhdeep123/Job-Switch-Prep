@@ -1,6 +1,6 @@
 // inference
 let cups = Math.random() > 0.5 ? 1 : '2'; // TypeScript infers the type of 'cups' as 'number' | 'string' based on the assigned value
-// annotation
+// annotations
 let cups2: number | string = Math.random() > 0.5 ? 1 : '2 '; // Explicitly annotate the type of 'cups2' as 'number | string'
 
 // basic types

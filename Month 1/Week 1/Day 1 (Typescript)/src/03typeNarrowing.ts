@@ -1,6 +1,6 @@
 // type narrowing is the process of refining the type of a variable within a specific scope, often using control flow statements like if, switch, or type guards. This allows TypeScript to provide more accurate type information and catch potential errors at compile time.
 
-// Example of type narrowing using an if statement
+// Example of type narrowing using an if statements
 
 function printLength(value: string | number): void {
     if (typeof value === "string") {

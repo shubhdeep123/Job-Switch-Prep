@@ -12,7 +12,7 @@ export function DebounceSearch() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <p>Typing Value: {query}</p>
+      <p>Typing Text: {query}</p>
       <p>Debounced Value: {deBouncedValue}</p>
     </div>
   );

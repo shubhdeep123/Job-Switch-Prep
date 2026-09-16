@@ -2,6 +2,7 @@
 
 // Example of type narrowing using an if statements
 
+
 function printLength(value: string | number): void {
     if (typeof value === "string") {
         // Within this block, TypeScript knows 'value' is a string

@@ -1,4 +1,4 @@
-// declaration of an object
+// declaration of an object in typescript
 
 // structural typing
 // in structural typing, the type of an object is determined by its structure rather than its name. This means that if two objects have the same properties and types, they are considered to be of the same type, even if they have different names.

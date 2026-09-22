@@ -2,6 +2,7 @@ function makeChai(type: string, sugar: boolean): string {
     return `Making a ${type} chai with ${sugar ? "sugar" : "no sugar"}`;
 }
 
+//function call
 makeChai("masala", true);
 
 // void functions

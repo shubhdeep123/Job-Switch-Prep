@@ -1,7 +1,7 @@
 // ARRAYS, TUPLES, AND ENUMS
 
 //most common way to declare an array in typescript
-let numbers: number[] = [1, 2, 3, 4, 5];
+let numbers: number[] = [1, 2, 3, 4, 5, 6];
 let characters: string[] = ["a", "b", "c", "d"];
 
 // another way to declare an array using generics
